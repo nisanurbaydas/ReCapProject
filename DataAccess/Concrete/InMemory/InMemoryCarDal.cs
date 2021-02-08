@@ -15,7 +15,7 @@ namespace DataAccess.Concrete.InMemory
         {
             _cars = new List<Car> { 
                 new Car{Id=1, BrandId=2, ColorId=123, DailyPrice=5000, ModelYear=2020, Description="Mercedes G63 AMG"},
-                new Car{Id=2, BrandId=3, ColorId=142, DailyPrice=10000, ModelYear=2020, Description="Chevy impala 1967"},
+                new Car{Id=2, BrandId=3, ColorId=542, DailyPrice=10000, ModelYear=2020, Description="Chevy impala 1967"},
                 new Car{Id=3, BrandId=4, ColorId=458, DailyPrice=6000, ModelYear=2020, Description="Buugatti veyron"}
             };
         }
