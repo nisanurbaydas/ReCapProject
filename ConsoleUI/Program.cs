@@ -10,7 +10,53 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            BrandTest();
+            
+        }
+
+        private static void RentalTest()
+        {
+            RentalManager rentalManager = new RentalManager(new EfRentalDal());
+            //Console.WriteLine(rentalManager.Add(new Rental { RentalId = 3, CarId = 1, CustomerId = 1, RentDate = "14-05-2021" }).Message);
+            //Console.WriteLine(rentalManager.Update(new Rental { RentalId = 1, CarId = 2, CustomerId = 1, RentDate = "12-05-2021", ReturnDate = "15-05-2021" }).Message);
+            foreach (var rental in rentalManager.GetAll().Data)
+            {
+                Console.WriteLine(rentalManager.GetAll().Message);
+                Console.WriteLine("Rental Id {0} / Car Id {1} / Customer Id {2} / Rent Date {3} / Return Date {4}", rental.RentalId, rental.CarId, rental.CustomerId, rental.RentDate, rental.ReturnDate);
+            }
+        }
+
+        private static void CustomerTest()
+        {
+            CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+            Console.WriteLine(customerManager.Add(new Customer { CustomerId = 1, UserId = 1, CompanyName = "Google" }).Message);
+            Console.WriteLine(customerManager.Update(new Customer { CustomerId = 1, UserId = 1, CompanyName = "Rockstar Games" }).Message);
+            Console.WriteLine(customerManager.Delete(new Customer { CustomerId = 2 }).Message);
+
+            foreach (var customer in customerManager.GetAll().Data)
+            {
+                Console.WriteLine(customerManager.GetAll().Message);
+                Console.WriteLine("Customer Id {0} / User Id {1} / Company Name {2}", customer.CustomerId, customer.UserId, customer.CompanyName);
+            }
+
+            foreach (var customer in customerManager.GetCustomerDetailDtos().Data)
+            {
+                Console.WriteLine(customerManager.GetCustomerDetailDtos().Message);
+                Console.WriteLine(customer.CustomerName + "/" + customer.CustomerSurname + "/" + customer.CustomerCompany);
+            }
+        }
+
+        private static void UserTest()
+        {
+            UserManager userManager = new UserManager(new EfUserDal());
+            Console.WriteLine(userManager.Add(new User { UserId = 2, FirstName = "Ömer", LastName = "Baydaş", Email = "o@homtail.com", Password = "abcdefg" }).Message);
+            userManager.Update(new User { UserId = 2, FirstName = "Ömer Faruk", LastName = "Baydaş", Email = "of@gmail.com", Password = "abcdefg" });
+            Console.WriteLine(userManager.Delete(new User { UserId = 2 }).Message);
+            
+            foreach (var user in userManager.GetAll().Data)
+            {
+                Console.WriteLine(userManager.GetAll().Message);
+                Console.WriteLine("User Id {0} / User Name {1} / User Surname {2} / User Email {3} / User Password {4}", user.UserId, user.FirstName,user.LastName,user.Email,user.Password);
+            }
         }
 
         private static void BrandTest()
