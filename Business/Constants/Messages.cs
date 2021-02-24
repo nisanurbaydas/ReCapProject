@@ -6,40 +6,40 @@ namespace Business.Constants
 {
     public static class Messages
     {
-        public static string CarAdded = "Araba eklendi";
-        public static string CarInvalid = "Araba eklenemedi";
-        public static string CarDeleted = "Araba silindi";
-        public static string CarUpdated = "Araba güncellendi";
-        public static string CarListed = "Arabalar listelendi";
-        public static string CarListedWDto = "Arabalar detaylarıyla listelendi";
-        public static string CarListedWBrandId = "Seçilen markanın arabaları listelendi";
-        public static string CarListedWColorId = "Seçilen renk arabalar listelendi";
+        public static string CarAdded = "Car added";
+        public static string CarInvalid = "Car could not be added";
+        public static string CarDeleted = "Car deleted";
+        public static string CarUpdated = "Car updated";
+        public static string CarListed = "Cars listed";
+        public static string CarListedWDto = "Cars listed with details";
+        public static string CarListedWBrandId = "Cars of the selected brand listed";
+        public static string CarListedWColorId = "Selected color cars listed";
 
-        public static string BrandAdded = "Marka eklendi";
-        public static string BrandDeleted = "Marka silindi";
-        public static string BrandUpdated = "Marka güncellendi";
-        public static string BrandListed = "Markalar listelendi";
+        public static string BrandAdded = "Brand added";
+        public static string BrandDeleted = "Brand deleted";
+        public static string BrandUpdated = "Brand updated";
+        public static string BrandListed = "Brands listed";
 
-        public static string ColorAdded = "Renk eklendi";
-        public static string ColorDeleted = "Renk silindi";
-        public static string ColorUpdated = "Renk güncellendi";
-        public static string ColorListed = "Renkler listelendi";
+        public static string ColorAdded = "Color added";
+        public static string ColorDeleted = "Color deleted";
+        public static string ColorUpdated = "Color updated";
+        public static string ColorListed = "Colors listed";
 
-        public static string UserAdded = "Kullanıcı eklendi";
-        public static string UserDeleted = "Kullanıcı silindi";
-        public static string UserUpdated = "Kullanıcı güncellendi";
-        public static string USerListed = "Kullanıcılar listelendi";
+        public static string UserAdded = "User added";
+        public static string UserDeleted = "User deleted";
+        public static string UserUpdated = "User updated";
+        public static string USerListed = "Users listed";
 
-        public static string CustomerAdded = "Müşteri eklendi";
-        public static string CustomerDeleted = "Müşteri silindi";
-        public static string CustomerUpdated = "Müşteri güncellendi";
-        public static string CustomerListed = "Müşteriler listelendi";
-        public static string CustomerListedWDto = "Müşteriler detaylarıyla listelendi";
+        public static string CustomerAdded = "Customer added";
+        public static string CustomerDeleted = "Customer deleted";
+        public static string CustomerUpdated = "Customer updated";
+        public static string CustomerListed = "Customers listed";
+        public static string CustomerListedWDto = "Customers listed with details";
 
-        public static string RentalAdded = "Kira eklendi";
-        public static string RentalDeleted = "Kira silindi";
-        public static string RentalUpdated = "Kira güncellendi";
-        public static string RentalListed = "Kiralar listelendi";
-        public static string RentalInvalid = "Araç kiralanamaz";
+        public static string RentalAdded = "Rent added";
+        public static string RentalDeleted = "Rent deleted";
+        public static string RentalUpdated = "Rent updated";
+        public static string RentalListed = "Rents listed";
+        public static string RentalInvalid = "Car cannot be rented";
     }
 }
